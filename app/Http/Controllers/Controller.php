@@ -14,7 +14,7 @@ class Controller extends BaseController
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    protected function index()
+    protected function main()
     {
         return view('pages.index');
     }

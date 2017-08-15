@@ -4,10 +4,10 @@
         <ul>
             <li class="current"><a href="{{route('index')}}" data-turbolinks="true">Главная</a></li>
             <li class="submenu">
-                <a href="/admin">Обучающимся</a>
+                <a href="{{route('student.index')}}">Обучающимся</a>
                 <ul>
-                    <li><a href="">6 класс</a></li>
-                    <li><a href="">7 класс</a></li>
+                    <li><a href="{{route('student.cat',['cat'=>1])}}">6 класс</a></li>
+                    <li><a href="{{route('student.cat',['cat'=>2])}}">7 класс</a></li>
                     <li><a href="">8 класс</a></li>
                     <li><a href="">9 класс</a></li>
                     <li><a href="">10 класс</a></li>

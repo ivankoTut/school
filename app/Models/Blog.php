@@ -33,4 +33,9 @@ class Blog extends Model
     {
         return $this->hasMany(File::class);
     }
+
+    public function smallText()
+    {
+        return substr(strip_tags($this->text), 0, 300) . "...";
+    }
 }

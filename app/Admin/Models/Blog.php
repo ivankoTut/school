@@ -44,26 +44,12 @@ class Blog extends Section implements Initializable
                 AdminColumn::text('category_id', 'Категория'),
                 AdminColumn::text('sub_category_id', 'Под Категория'),
                 AdminColumn::text('sub_sub_category_id', 'Под под Категория'),
-                AdminColumn::text('icon', 'Иконка поста'),
-                AdminColumn::text('text', 'Текст')
+                AdminColumn::text('icon', 'Иконка поста')
             )->paginate(20);
     }
 
     public function onEdit($id)
     {
-        /*AdminForm::panel()->addBody([
-            AdminFormElement::text('name', 'Название')->required(),
-            AdminFormElement::select('category_id', 'Категория', \App\Models\Category::class)
-                ->setDisplay('name')->required(),
-            AdminFormElement::select('sub_category_id', 'Под Категория', \App\Models\SubCategory::class)
-                ->setDisplay('name'),
-            AdminFormElement::select('sub_sub_category_id', 'Под под Категория', \App\Models\SubSubCategory::class)
-                ->setDisplay('name'),
-            AdminFormElement::text('icon', 'Иконка поста')->required(),
-            AdminFormElement::text('text', 'Текст')->required(),
-        ]);*/
-
-
         $form = AdminForm::panel();
         $form->addHeader([
             AdminFormElement::columns()

@@ -11,5 +11,8 @@
 |
 */
 
-Route::get('/', ['as' => 'index', 'uses' => 'Controller@index']);
+Route::get('/', ['as' => 'index', 'uses' => 'Controller@main']);
 Route::get('/blog', ['as' => 'blog', 'uses' => 'Controller@blog']);
+
+Route::resource('student', 'StudentController');
+Route::get('/student/cat/{cat}', ['as' => 'student.cat', 'uses' => 'StudentController@showCat']);

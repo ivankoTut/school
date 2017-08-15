@@ -20,7 +20,7 @@ class CreateBlogsTable extends Migration
             $table->integer('sub_category_id')->nullable();
             $table->integer('sub_sub_category_id')->nullable();
             $table->string('icon');
-            $table->string('text');
+            $table->longText('text');
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories')
