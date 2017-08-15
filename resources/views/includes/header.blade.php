@@ -2,9 +2,9 @@
     <h1 id="logo"><a href="{{route('index')}}">{{config('app.name')}}</a></h1>
     <nav id="nav">
         <ul>
-            <li class="current"><a href="{{route('index')}}">Главная</a></li>
+            <li class="current"><a href="{{route('index')}}" data-turbolinks="true">Главная</a></li>
             <li class="submenu">
-                <a href="{{route('index')}}">Обучающимся</a>
+                <a href="/admin">Обучающимся</a>
                 <ul>
                     <li><a href="">6 класс</a></li>
                     <li><a href="">7 класс</a></li>
@@ -15,7 +15,7 @@
                 </ul>
             </li>
             <li class="submenu">
-                <a href="{{route('index')}}">Методическая копилка</a>
+                <a href="/blog" data-turbolinks="true">Методическая копилка</a>
                 <ul>
                     <li><a href="">Классные работы</a></li>
                     <li><a href="">Внекласные работы</a></li>

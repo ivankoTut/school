@@ -6,6 +6,7 @@ use AdminColumn;
 use AdminDisplay;
 use AdminForm;
 use AdminFormElement;
+use AdminSection;
 use Auth;
 use Illuminate\Database\Eloquent\Model;
 use SleepingOwl\Admin\Contracts\Initializable;
@@ -50,7 +51,7 @@ class Blog extends Section implements Initializable
 
     public function onEdit($id)
     {
-        return AdminForm::panel()->addBody([
+        /*AdminForm::panel()->addBody([
             AdminFormElement::text('name', 'Название')->required(),
             AdminFormElement::select('category_id', 'Категория', \App\Models\Category::class)
                 ->setDisplay('name')->required(),
@@ -60,7 +61,39 @@ class Blog extends Section implements Initializable
                 ->setDisplay('name'),
             AdminFormElement::text('icon', 'Иконка поста')->required(),
             AdminFormElement::text('text', 'Текст')->required(),
+        ]);*/
+
+
+        $form = AdminForm::panel();
+        $form->addHeader([
+            AdminFormElement::columns()
+                ->addColumn([
+                    AdminFormElement::text('name', 'Название')->required(),
+                    AdminFormElement::select('category_id', 'Категория', \App\Models\Category::class)
+                        ->setDisplay('name')->required(),
+                ], 3)->addColumn([
+                    AdminFormElement::select('sub_category_id', 'Под Категория', \App\Models\SubCategory::class)
+                        ->setDisplay('name'),
+                    AdminFormElement::select('sub_sub_category_id', 'Под под Категория', \App\Models\SubSubCategory::class)
+                        ->setDisplay('name'),
+                ], 12)->addColumn([
+                    AdminFormElement::image('icon', 'Иконка поста')->required(),
+                    AdminFormElement::ckeditor('text', 'Текст')->required(),
+                ])
         ]);
+        $Files= AdminSection::getModel(\App\Models\File::class)->fireDisplay();
+        $Files->getScopes()->push(['withBlog', $id]);
+        $Files->setParameter('blog_id', $id);
+        $Files->getColumns()->disableControls();
+        $tabs = AdminDisplay::tabbed([
+            'Файлы' => new \SleepingOwl\Admin\Form\FormElements([
+                $Files
+            ]),
+        ]);
+
+        $form->addElement($tabs);
+
+        return $form;
 
     }
 

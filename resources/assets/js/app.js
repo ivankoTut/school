@@ -5,9 +5,16 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+import $ from './libs/jquery.min';
+window.$ = window.jQuery = $;
+require('./libs/jquery.dropotron.min');
+import skel from './libs/skel.min';
+window.skel = skel;
+require('./libs/skel-layers.min');
+require('./libs/init');
 
 window.Vue = require('vue');
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -15,8 +22,8 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+/*Vue.component('example', require('./components/Example.vue'));
 
 const app = new Vue({
     el: '#app'
-});
+});*/

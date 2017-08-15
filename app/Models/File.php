@@ -21,5 +21,16 @@ use Illuminate\Database\Eloquent\Model;
  */
 class File extends Model
 {
-    //
+
+    public function blog()
+    {
+        return $this->belongsTo(Blog::class);
+    }
+
+    public function scopeWithBlog($query, $blogId)
+    {
+        $query->whereHas('blog', function ($q) use ($blogId) {
+            $q->where('blog_id', $blogId);
+        });
+    }
 }

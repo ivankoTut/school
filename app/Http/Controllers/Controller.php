@@ -18,4 +18,9 @@ class Controller extends BaseController
     {
         return view('pages.index');
     }
+
+    protected function blog()
+    {
+        return view('pages.blog');
+    }
 }
