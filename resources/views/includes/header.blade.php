@@ -68,10 +68,10 @@
                 </ul>
             </li>
             <li class="submenu">
-                <a href="{{route('index')}}">Готовимся к ГИА</a>
+                <a href="{{route('gia.index')}}">Готовимся к ГИА</a>
                 <ul>
-                    <li><a href="">9 класс</a></li>
-                    <li><a href="">11 класс</a></li>
+                    <li><a href="{{route('gia.cat', [ 'cat' => 6 ])}}">9 класс</a></li>
+                    <li><a href="{{route('gia.cat', [ 'cat' => 8 ])}}">11 класс</a></li>
                 </ul>
             </li>
             <li class="submenu">

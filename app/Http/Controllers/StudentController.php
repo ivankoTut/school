@@ -39,6 +39,11 @@ class StudentController extends Controller
         //
     }
 
+    /**
+     * @param $cat
+     * @param StudentServices $services
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function showCat($cat, StudentServices $services)
     {
         $posts = $services->getCatPosts($cat);
@@ -46,6 +51,11 @@ class StudentController extends Controller
         return view('student.cat', compact('posts'));
     }
 
+    /**
+     * @param $id
+     * @param StudentServices $services
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function showPost($id, StudentServices $services)
     {
         $post = $services->initCatId($services->getCatId())->getPost($id);

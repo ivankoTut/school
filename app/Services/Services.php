@@ -62,7 +62,6 @@ class Services
      */
     public function getPost($id)
     {
-
         $post = Blog::where('category_id', $this->catId)->where('id', $id)->first();
         $this->isPost($post);
 

@@ -20,6 +20,8 @@ class Blog extends Section implements Initializable
     static $cat = [
         'student' => 1,
         'methodology' => 2,
+        'progress' => 3,
+        'gia' => 4,
     ];
 
     public function initialize()

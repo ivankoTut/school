@@ -35,3 +35,10 @@ Route::get('/methodology/cat/{cat}/{sub}', [
     'uses' => 'MethodologyController@showSubCat'
 ]);
 Route::get('/methodology/show/{id}', ['as' => 'methodology.show', 'uses' => 'MethodologyController@showPost']);
+
+/**
+ * gia
+ */
+Route::resource('gia', 'GiaController');
+Route::get('/gia/cat/{cat}', ['as' => 'gia.cat', 'uses' => 'GiaController@showCat']);
+Route::get('/gia/show/{id}', ['as' => 'gia.show', 'uses' => 'GiaController@showPost']);

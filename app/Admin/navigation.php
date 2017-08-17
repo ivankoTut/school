@@ -25,6 +25,16 @@ return [
         'icon'  => 'fa fa-exclamation-circle',
         'url'   => '/admin/blogs?show=methodology',
     ],
+    [
+        'title' => 'Готовимся к ГИА',
+        'icon'  => 'fa fa-exclamation-circle',
+        'url'   => '/admin/blogs?show=gia',
+    ],
+    [
+        'title' => 'Наши достижения',
+        'icon'  => 'fa fa-exclamation-circle',
+        'url'   => '/admin/blogs?show=progress',
+    ],
 
     // Examples
     // [
