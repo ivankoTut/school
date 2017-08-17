@@ -75,9 +75,9 @@
                 </ul>
             </li>
             <li class="submenu">
-                <a href="{{route('index')}}">Еще</a>
+                <a href="#">Еще</a>
                 <ul>
-                    <li><a href="">Наши достижения</a></li>
+                    <li><a href="{{route('progress.index')}}">Наши достижения</a></li>
                     <li><a href="">Педагогическая деятельность</a></li>
                     <li><a href="">Классному руководителю</a></li>
                     <li><a href="">Фото</a></li>

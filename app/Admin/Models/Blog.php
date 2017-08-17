@@ -44,8 +44,12 @@ class Blog extends Section implements Initializable
     public function onDisplay()
     {
         return AdminDisplay::table()
-            ->setApply(function($query) { $query->where('category_id', self::$cat[request('show')])
-                ->orderBy('created_at', 'desc'); })
+            ->setApply(function($query) {
+                if (request('show')) {
+                    $query->where('category_id', self::$cat[request('show')])
+                        ->orderBy('created_at', 'desc');
+                }
+            })
             ->setColumns(
                 AdminColumn::text('id', 'Id'),
                 AdminColumn::text('name', 'Название'),

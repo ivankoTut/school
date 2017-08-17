@@ -2,18 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\ProgressServices;
 use Illuminate\Http\Request;
 
 class ProgressController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @param ProgressServices $services
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index()
+    public function index( ProgressServices $services)
     {
-        //
+        $posts = $services->getAllBlog();
+
+        return view('progress.index', compact('posts'));
     }
 
     /**
@@ -38,14 +40,15 @@ class ProgressController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param $id
+     * @param ProgressServices $services
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show($id)
+    public function show($id, ProgressServices $services)
     {
-        //
+        $post = $services->initCatId($services->getCatId())->getPost($id);
+
+        return view('progress.show', compact('post'));
     }
 
     /**
