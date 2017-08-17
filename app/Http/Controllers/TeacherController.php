@@ -2,18 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\BlogServices;
 use Illuminate\Http\Request;
 
 class TeacherController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function __construct(BlogServices $services)
     {
-        //
+        $services->setMainCat(5)->init();
+    }
+
+    /**
+     * @param BlogServices $services
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index( BlogServices $services)
+    {
+        $posts = $services->getAllBlog();
+
+        return view('teacher.index', compact('posts'));
     }
 
     /**
@@ -38,14 +45,15 @@ class TeacherController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param $id
+     * @param BlogServices $services
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show($id)
+    public function show($id, BlogServices $services)
     {
-        //
+        $post = $services->initCatId($services->getCatId())->getPost($id);
+
+        return view('teacher.show', compact('post'));
     }
 
     /**

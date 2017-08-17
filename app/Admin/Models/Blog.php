@@ -7,7 +7,6 @@ use AdminDisplay;
 use AdminForm;
 use AdminFormElement;
 use AdminSection;
-use Auth;
 use Illuminate\Database\Eloquent\Model;
 use SleepingOwl\Admin\Contracts\Initializable;
 use SleepingOwl\Admin\Section;
@@ -22,6 +21,11 @@ class Blog extends Section implements Initializable
         'methodology' => 2,
         'progress' => 3,
         'gia' => 4,
+        'teacher' => 5,
+        'class_teacher' => 6,
+        'photo' => 7,
+        'contest' => 8,
+        'olympics' => 9,
     ];
 
     public function initialize()

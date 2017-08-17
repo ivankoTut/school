@@ -44,7 +44,9 @@ Route::get('/gia/cat/{cat}', ['as' => 'gia.cat', 'uses' => 'GiaController@showCa
 Route::get('/gia/show/{id}', ['as' => 'gia.show', 'uses' => 'GiaController@showPost']);
 
 
-/**
- * progress
- */
 Route::resource('progress', 'ProgressController');
+Route::resource('teacher', 'TeacherController');
+Route::resource('class-teacher', 'ClassTeacherController');
+Route::resource('photo', 'PhotoController');
+Route::resource('contest', 'ContestController');
+Route::resource('olympics', 'OlympicsController');

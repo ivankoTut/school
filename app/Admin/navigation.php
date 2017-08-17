@@ -35,6 +35,31 @@ return [
         'icon'  => 'fa fa-exclamation-circle',
         'url'   => '/admin/blogs?show=progress',
     ],
+    [
+        'title' => 'Педагогическая деятельность',
+        'icon'  => 'fa fa-exclamation-circle',
+        'url'   => '/admin/blogs?show=teacher',
+    ],
+    [
+        'title' => 'Классному руководителю',
+        'icon'  => 'fa fa-exclamation-circle',
+        'url'   => '/admin/blogs?show=class_teacher',
+    ],
+    [
+        'title' => 'Фото',
+        'icon'  => 'fa fa-exclamation-circle',
+        'url'   => '/admin/blogs?show=photo',
+    ],
+    [
+        'title' => 'Конкурсы',
+        'icon'  => 'fa fa-exclamation-circle',
+        'url'   => '/admin/blogs?show=contest',
+    ],
+    [
+        'title' => 'Олимпиады',
+        'icon'  => 'fa fa-exclamation-circle',
+        'url'   => '/admin/blogs?show=olympics',
+    ],
 
     // Examples
     // [

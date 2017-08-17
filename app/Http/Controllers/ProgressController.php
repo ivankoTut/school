@@ -2,16 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\ProgressServices;
+use App\Services\BlogServices;
 use Illuminate\Http\Request;
 
 class ProgressController extends Controller
 {
+
+    public function __construct(BlogServices $services)
+    {
+        $services->setMainCat(3)->init();
+    }
+
     /**
-     * @param ProgressServices $services
+     * @param BlogServices $services
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index( ProgressServices $services)
+    public function index( BlogServices $services)
     {
         $posts = $services->getAllBlog();
 
@@ -41,10 +47,10 @@ class ProgressController extends Controller
 
     /**
      * @param $id
-     * @param ProgressServices $services
+     * @param BlogServices $services
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show($id, ProgressServices $services)
+    public function show($id, BlogServices $services)
     {
         $post = $services->initCatId($services->getCatId())->getPost($id);
 

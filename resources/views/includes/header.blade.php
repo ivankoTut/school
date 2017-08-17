@@ -78,11 +78,11 @@
                 <a href="#">Еще</a>
                 <ul>
                     <li><a href="{{route('progress.index')}}">Наши достижения</a></li>
-                    <li><a href="">Педагогическая деятельность</a></li>
-                    <li><a href="">Классному руководителю</a></li>
-                    <li><a href="">Фото</a></li>
-                    <li><a href="">Конкурсы</a></li>
-                    <li><a href="">Олимпиады</a></li>
+                    <li><a href="{{route('teacher.index')}}">Педагогическая деятельность</a></li>
+                    <li><a href="{{route('class-teacher.index')}}">Классному руководителю</a></li>
+                    <li><a href="{{route('photo.index')}}">Фото</a></li>
+                    <li><a href="{{route('contest.index')}}">Конкурсы</a></li>
+                    <li><a href="{{route('olympics.index')}}">Олимпиады</a></li>
                     <li><a href="">Задать вопрос</a></li>
                 </ul>
             </li>
