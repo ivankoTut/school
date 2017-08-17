@@ -17,6 +17,11 @@ use App\Models\Blog as BG;
 class Blog extends Section implements Initializable
 {
 
+    static $cat = [
+        'student' => 1,
+        'methodology' => 2,
+    ];
+
     public function initialize()
     {
         $this->title = 'Blog';
@@ -37,7 +42,8 @@ class Blog extends Section implements Initializable
     public function onDisplay()
     {
         return AdminDisplay::table()
-            ->setApply(function($query) { $query->where('category_id', 1)->orderBy('created_at', 'desc'); })
+            ->setApply(function($query) { $query->where('category_id', self::$cat[request('show')])
+                ->orderBy('created_at', 'desc'); })
             ->setColumns(
                 AdminColumn::text('id', 'Id'),
                 AdminColumn::text('name', 'Название'),

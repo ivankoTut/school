@@ -16,9 +16,14 @@ return [
     ],
 
     [
-        'title' => 'обучающимся',
+        'title' => 'Обучающимся',
         'icon'  => 'fa fa-exclamation-circle',
         'url'   => '/admin/blogs?show=student',
+    ],
+    [
+        'title' => 'Методическая копилка',
+        'icon'  => 'fa fa-exclamation-circle',
+        'url'   => '/admin/blogs?show=methodology',
     ],
 
     // Examples

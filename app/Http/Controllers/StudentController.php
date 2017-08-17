@@ -46,6 +46,13 @@ class StudentController extends Controller
         return view('student.cat', compact('posts'));
     }
 
+    public function showPost($id, StudentServices $services)
+    {
+        $post = $services->initCatId($services->getCatId())->getPost($id);
+
+        return view('student.show', compact('post'));
+    }
+
     /**
      * Display the specified resource.
      *
