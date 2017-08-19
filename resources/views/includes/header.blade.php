@@ -83,7 +83,7 @@
                     <li><a href="{{route('photo.index')}}">Фото</a></li>
                     <li><a href="{{route('contest.index')}}">Конкурсы</a></li>
                     <li><a href="{{route('olympics.index')}}">Олимпиады</a></li>
-                    <li><a href="">Задать вопрос</a></li>
+                    <li><a href="{{route('support.index')}}">Задать вопрос</a></li>
                 </ul>
             </li>
             <li><a href="#" class="button special">Sign Up</a></li>

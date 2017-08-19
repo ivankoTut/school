@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\File;
 use App\Models\SubCategory;
 use App\Models\SubSubCategory;
+use App\Models\Support;
 use SleepingOwl\Admin\Providers\AdminSectionsServiceProvider as ServiceProvider;
 
 
@@ -22,6 +23,7 @@ class AdminSectionsServiceProvider extends ServiceProvider
         SubSubCategory::class => \App\Admin\Models\SubSubCategory::class,
         Blog::class => \App\Admin\Models\Blog::class,
         File::class => \App\Admin\Models\File::class,
+        Support::class => \App\Admin\Models\Support::class,
     ];
 
     /**

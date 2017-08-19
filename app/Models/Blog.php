@@ -26,6 +26,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Blog whereSubSubCategoryId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Blog whereText($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Blog whereUpdatedAt($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\File[] $files
  */
 class Blog extends Model
 {

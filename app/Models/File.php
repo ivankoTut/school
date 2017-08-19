@@ -18,6 +18,10 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\File whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\File whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\File whereUpdatedAt($value)
+ * @property string $file
+ * @property-read \App\Models\Blog $blog
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\File whereFile($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\File withBlog($blogId)
  */
 class File extends Model
 {

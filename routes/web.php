@@ -50,3 +50,4 @@ Route::resource('class-teacher', 'ClassTeacherController');
 Route::resource('photo', 'PhotoController');
 Route::resource('contest', 'ContestController');
 Route::resource('olympics', 'OlympicsController');
+Route::resource('support', 'SupportController');
