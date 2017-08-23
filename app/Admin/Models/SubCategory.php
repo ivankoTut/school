@@ -19,8 +19,8 @@ class SubCategory extends Section implements Initializable
     public function initialize()
     {
         $this->title = 'Под категории';
-        $this->icon = 'fa fa-newspaper-o';
-        $this->addToNavigation($priority = 500, function() { return Cat::count(); });
+        $this->icon = 'fa fa-map-o';
+        $this->addToNavigation($priority = 4, function() { return Cat::count(); });
     }
     public function isDeletable(Model $model)
     {

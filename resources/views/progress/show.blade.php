@@ -2,6 +2,8 @@
 
 @section('title', 'Наши достижения' . $post->name)
 
+@section('theme', $post->name)
+
 @section('content')
     <section>
         <header>
@@ -10,6 +12,10 @@
         <a href="#" class="image feature">
             <img src="/{{$post->icon}}" alt="" />
         </a>
-        <p>{!! $post->text !!}</p>
+        @include('.includes.slider')
+        <div>
+            {!! $post->text !!}
+        </div>
+        @include('.includes.badge')
     </section>
 @endsection

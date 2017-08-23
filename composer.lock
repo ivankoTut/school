@@ -4,8 +4,69 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1c43f82ca7b108afc5bbe3c5c4f51b9",
+    "content-hash": "8a8e0b01fe6bddfb366bd2b86cbaadfc",
     "packages": [
+        {
+            "name": "arrilot/laravel-widgets",
+            "version": "3.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/arrilot/laravel-widgets.git",
+                "reference": "4291f9c87eff2bfb001872a830aa01ba591f4363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/arrilot/laravel-widgets/zipball/4291f9c87eff2bfb001872a830aa01ba591f4363",
+                "reference": "4291f9c87eff2bfb001872a830aa01ba591f4363",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": ">=5.1",
+                "illuminate/container": ">=5.1",
+                "illuminate/contracts": ">=5.1",
+                "illuminate/support": ">=5.1",
+                "illuminate/view": ">=5.1",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Arrilot\\Widgets\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "Widget": "Arrilot\\Widgets\\Facade",
+                        "AsyncWidget": "Arrilot\\Widgets\\AsyncFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Arrilot\\Widgets\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nekrasov Ilya",
+                    "email": "nekrasov.ilya90@gmail.com"
+                }
+            ],
+            "description": "A powerful alternative to view composers. Asynchronous widgets, reloadable widgets, console generator, caching - everything you can think of.",
+            "homepage": "https://github.com/Arrilot/laravel-widgets",
+            "keywords": [
+                "ajax",
+                "laravel",
+                "widgets"
+            ],
+            "time": "2017-08-19T00:22:09+00:00"
+        },
         {
             "name": "barryvdh/laravel-debugbar",
             "version": "v2.4.3",
@@ -127,58 +188,6 @@
                 "sublime"
             ],
             "time": "2017-07-16T00:24:12+00:00"
-        },
-        {
-            "name": "barryvdh/laravel-stack-middleware",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/barryvdh/laravel-stack-middleware.git",
-                "reference": "0f41fbb2437ebb67a24a3bef7dfb249a02cf2635"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-stack-middleware/zipball/0f41fbb2437ebb67a24a3bef7dfb249a02cf2635",
-                "reference": "0f41fbb2437ebb67a24a3bef7dfb249a02cf2635",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "5.1.x|5.2.x|5.3.x|5.4.x",
-                "php": ">=5.5",
-                "symfony/http-kernel": "~2.6|~3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Barryvdh\\StackMiddleware\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Barry vd. Heuvel",
-                    "email": "barryvdh@gmail.com"
-                }
-            ],
-            "description": "Stack Middleware for Laravel 5",
-            "keywords": [
-                "StackPHP",
-                "laravel",
-                "middleware",
-                "stack"
-            ],
-            "time": "2017-03-31T15:17:07+00:00"
         },
         {
             "name": "barryvdh/reflection-docblock",
@@ -821,112 +830,6 @@
                 "parser"
             ],
             "time": "2017-05-14T14:47:48+00:00"
-        },
-        {
-            "name": "frenzy/turbolinks",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/frenzyapp/turbolinks.git",
-                "reference": "dc61df2cc361685d314ce12c59fab4ffe17bad06"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/frenzyapp/turbolinks/zipball/dc61df2cc361685d314ce12c59fab4ffe17bad06",
-                "reference": "dc61df2cc361685d314ce12c59fab4ffe17bad06",
-                "shasum": ""
-            },
-            "require": {
-                "barryvdh/laravel-stack-middleware": "~1.1.0",
-                "helthe/turbolinks": "~2.0.0",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Frenzy\\Turbolinks\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Studio Frénétic",
-                    "email": "info@studiofrenetic.com"
-                },
-                {
-                    "name": "Tortue Torche",
-                    "email": "tortuetorche@spam.me"
-                }
-            ],
-            "description": "Frenzy Turbolinks makes following links in your web application faster with Laravel 5",
-            "keywords": [
-                "ajax",
-                "assets",
-                "javascript",
-                "larasset",
-                "laravel",
-                "laravel 5",
-                "pjax",
-                "turbolinks",
-                "turbolinks 5"
-            ],
-            "time": "2017-04-03T11:18:45+00:00"
-        },
-        {
-            "name": "helthe/turbolinks",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/helthe/Turbolinks.git",
-                "reference": "6b798cce241769137d639cafaa5f4b919647283c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/helthe/Turbolinks/zipball/6b798cce241769137d639cafaa5f4b919647283c",
-                "reference": "6b798cce241769137d639cafaa5f4b919647283c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "symfony/http-foundation": "~2.3|~3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.8",
-                "symfony/http-kernel": "~2.3|~3.0"
-            },
-            "suggest": {
-                "symfony/http-kernel": "Required for usage with the Symfony HttpKernel Component"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.4.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Helthe\\Component\\Turbolinks\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Carl Alexander",
-                    "email": "carlalexander@helthe.co"
-                }
-            ],
-            "description": "Helthe Turbolinks Component",
-            "homepage": "https://helthe.co",
-            "keywords": [
-                "turbolinks"
-            ],
-            "time": "2017-01-20T00:37:46+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -3040,6 +2943,58 @@
     ],
     "packages-dev": [
         {
+            "name": "barryvdh/laravel-stack-middleware",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-stack-middleware.git",
+                "reference": "0f41fbb2437ebb67a24a3bef7dfb249a02cf2635"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-stack-middleware/zipball/0f41fbb2437ebb67a24a3bef7dfb249a02cf2635",
+                "reference": "0f41fbb2437ebb67a24a3bef7dfb249a02cf2635",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.1.x|5.2.x|5.3.x|5.4.x",
+                "php": ">=5.5",
+                "symfony/http-kernel": "~2.6|~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\StackMiddleware\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Stack Middleware for Laravel 5",
+            "keywords": [
+                "StackPHP",
+                "laravel",
+                "middleware",
+                "stack"
+            ],
+            "time": "2017-03-31T15:17:07+00:00"
+        },
+        {
             "name": "doctrine/instantiator",
             "version": "1.0.5",
             "source": {
@@ -3185,6 +3140,59 @@
                 "test"
             ],
             "time": "2015-05-11T14:41:42+00:00"
+        },
+        {
+            "name": "helthe/turbolinks",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/helthe/Turbolinks.git",
+                "reference": "6b798cce241769137d639cafaa5f4b919647283c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/helthe/Turbolinks/zipball/6b798cce241769137d639cafaa5f4b919647283c",
+                "reference": "6b798cce241769137d639cafaa5f4b919647283c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/http-foundation": "~2.3|~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8",
+                "symfony/http-kernel": "~2.3|~3.0"
+            },
+            "suggest": {
+                "symfony/http-kernel": "Required for usage with the Symfony HttpKernel Component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Helthe\\Component\\Turbolinks\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carl Alexander",
+                    "email": "carlalexander@helthe.co"
+                }
+            ],
+            "description": "Helthe Turbolinks Component",
+            "homepage": "https://helthe.co",
+            "keywords": [
+                "turbolinks"
+            ],
+            "time": "2017-01-20T00:37:46+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -4514,8 +4522,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "laravelrus/sleepingowl": 20,
-        "frenzy/turbolinks": 20
+        "laravelrus/sleepingowl": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\Blog;
 use App\Models\Category;
 use App\Models\File;
+use App\Models\Slider;
 use App\Models\SubCategory;
 use App\Models\SubSubCategory;
 use App\Models\Support;
@@ -24,6 +25,7 @@ class AdminSectionsServiceProvider extends ServiceProvider
         Blog::class => \App\Admin\Models\Blog::class,
         File::class => \App\Admin\Models\File::class,
         Support::class => \App\Admin\Models\Support::class,
+        Slider::class => \App\Admin\Models\Slider::class,
     ];
 
     /**

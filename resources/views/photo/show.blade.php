@@ -10,6 +10,9 @@
         <a href="#" class="image feature">
             <img src="/{{$post->icon}}" alt="" />
         </a>
-        <p>{!! $post->text !!}</p>
+        <div>
+            {!! $post->text !!}
+        </div>
+        @include('.includes.badge')
     </section>
 @endsection

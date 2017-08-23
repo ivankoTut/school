@@ -22,8 +22,7 @@
 
     <header class="special container">
         <span class="icon fa-laptop"></span>
-        <h2>Behold the <strong>Left Sidebar</strong></h2>
-        <p>Where things on the left ... accompany that on the right.</p>
+        <h1>@yield('theme', 'Тема ....')</h1>
     </header>
 
     <!-- One -->

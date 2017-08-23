@@ -24,7 +24,7 @@ class MethodologyServices extends HelpServices
      */
     function __construct()
     {
-        $this->blog = Blog::where('category_id', $this->mainCat);
+        $this->blog = Blog::with('files')->where('category_id', $this->mainCat);
     }
 
     /**

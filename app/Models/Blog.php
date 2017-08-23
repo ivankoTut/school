@@ -27,12 +27,20 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Blog whereText($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Blog whereUpdatedAt($value)
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\File[] $files
+ * @property int $views
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Blog whereViews($value)
+ * @property-read \App\Models\Slider $slider
  */
 class Blog extends Model
 {
     public function files()
     {
         return $this->hasMany(File::class);
+    }
+
+    public function slider()
+    {
+        return $this->hasOne(Slider::class);
     }
 
     public function smallText()

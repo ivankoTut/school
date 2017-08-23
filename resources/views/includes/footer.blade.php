@@ -11,3 +11,8 @@
     <span class="copyright">&copy; Untitled. All rights reserved. <a href="#" target="_blank">Free Html5 Templates</a> by <a href="http://bayguzin.ru/">bayguzin.ru</a>.</span>
 
 </footer>
+<script>
+    $(function(){
+        $("a[rel='prettyPhoto']").prettyPhoto();
+    });
+</script>

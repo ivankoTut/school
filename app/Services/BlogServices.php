@@ -33,7 +33,7 @@ class BlogServices extends HelpServices
      */
     function init()
     {
-        $this->blog = Blog::where('category_id', $this->mainCat);
+        $this->blog = Blog::with('files')->where('category_id', $this->mainCat);
 
         return $this;
     }
@@ -57,5 +57,14 @@ class BlogServices extends HelpServices
         $this->isPosts($posts);
 
         return $posts;
+    }
+
+    /**
+     * @param int $count
+     * @return mixed
+     */
+    public function getRandomPost($count = 2)
+    {
+        return $this->blog->get()->random($count);
     }
 }

@@ -10,6 +10,7 @@ namespace App\Services;
 
 use App\Models\Blog;
 use Illuminate\Support\Collection;
+use phpDocumentor\Reflection\Types\Integer;
 
 /**
  * Class Services
@@ -62,9 +63,33 @@ class Services
      */
     public function getPost($id)
     {
-        $post = Blog::where('category_id', $this->catId)->where('id', $id)->first();
+        $post = Blog::with('files')
+            ->where('category_id', $this->catId)
+            ->where('id', $id)->first();
         $this->isPost($post);
 
         return $post;
+    }
+
+
+    /**
+     * @param Blog $post
+     * @return Blog
+     */
+    protected function updateView(Blog $post)
+    {
+        $post->views += 1;
+        $post->save();
+
+        return $post;
+    }
+
+    /**
+     * @param int $count
+     * @return mixed
+     */
+    public function getRandomPost($count = 2)
+    {
+        return Blog::all()->random($count);
     }
 }
